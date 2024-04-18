@@ -1,0 +1,84 @@
+html {
+    font-size: 62.5%;
+  }
+  
+  :root {
+    --color-orange: #ff7455;
+    --color-blue: #1ba8b1;
+    --color-yellow: #fffeaa;
+    --color-pink: #ff0079;
+    --color-green: #dcff46;
+    --color-background: #FAFAFA;  
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxe;
+    background-color: var(--color-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .container {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    grid-gap: 6rem;
+  }
+  
+  .stickyNote {
+    padding: 1.5rem;
+    background-color: var(--color-yellow);
+    height: 20rem;
+    box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.47);
+    transition: all .3s;
+  }
+  
+  .stickyNote--blue {
+    background-color: var(--color-blue);
+  }
+  
+  .stickyNote--orange {
+    background-color: var(--color-orange);
+  }
+  
+  .stickyNote:hover {
+    transform: scale(1.2);
+    box-shadow: 10px 15px 15px 0px rgba(0,0,0,0.47);
+  }
+  
+  .text {
+    line-height: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    justify-content: end;
+    grid-column-gap: 2rem;
+    visibility: hidden;
+  }
+  
+  .stickyNote:hover .actions {
+    visibility: visible;
+  }
+  
+  .icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    filter: opacity(0.4);
+    transition: all .2s;
+  }
+  
+  .icon:last-child {
+    margin-right: 1rem
+  }
+  
+  .icon:hover {
+    filter: opacity(1);
+  }
